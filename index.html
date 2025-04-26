@@ -1,287 +1,210 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Saya - Modern</title>
-    <style>
-        /* === GLOBAL STYLES === */
-        :root {
-            --primary: #3498db;
-            --secondary: #2c3e50;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #333;
-            --gray: #95a5a6;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f9f9f9;
-            color: var(--dark);
-            line-height: 1.6;
-        }
-        
-        section {
-            padding: 3rem 2rem;
-        }
-        
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        
-        /* === NAVIGATION === */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-            background-color: var(--secondary);
-            color: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        
-        .brand {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-        }
-        
-        .nav-links a {
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        /* === HEADER === */
-        .header {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            align-items: center;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-        }
-        
-        .header-content h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .header-content p {
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 0.8rem 1.5rem;
-            background-color: var(--accent);
-            color: white;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #c0392b;
-            transform: translateY(-2px);
-        }
-        
-        /* === BIODATA === */
-        .biodata {
-            background-color: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--secondary);
-        }
-        
-        .section-title p {
-            color: var(--gray);
-        }
-        
-        .biodata-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
-        
-        .bio-card {
-            background-color: var(--light);
-            padding: 1.5rem;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s;
-        }
-        
-        .bio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .bio-card strong {
-            color: var(--primary);
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        /* === PORTOFOLIO === */
-        .portfolio {
-            background-color: var(--light);
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        
-        .project-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s;
-        }
-        
-        .project-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-            margin: 0 auto;
-            padding: 10px;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .project-info {
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .project-info h3 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dedin Aliyudin - Web Developer</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #ff6b00;
+      --accent: #ff914d;
+    }
+
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border: 5px solid var(--primary);
+    }
+
+    .highlight {
+      color: var(--primary);
+    }
+
+    .btn-accent {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .btn-accent:hover {
+      background-color: #ff7833;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-header {
+        border-bottom: 1px solid #ddd;
+      }
+
+      .mobile-nav {
+        border-top: 1px solid #ddd;
+      }
+    }
+
+    /* Custom adjustment for desktop header */
+    @media (min-width: 992px) {
+      .hero-text {
+        flex: 0 0 60%;
+        max-width: 60%;
+        padding-right: 3rem;
+      }
+      
+      .hero-image {
+        flex: 0 0 40%;
+        max-width: 40%;
+      }
+    }
+  </style>
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="brand">Profil Saya</div>
-        <div class="nav-links">
-            <a href="#header">Header</a>
-            <a href="#biodata">Biodata</a>
-            <a href="#portofolio">Portofolio</a>
-        </div>
-    </nav>
 
-    <!-- Header -->
-    <section id="header" class="header">
-        <div class="header-content">
-            <h2>Selamat Datang di Website Saya</h2>
-            <p>Ini adalah contoh header modern dengan layout grid. Kolom kiri berisi teks deskripsi dan tombol CTA.</p>
-            <a href="#" class="btn">Pelajari Lebih Lanjut</a>
+<body class="bg-light">
+  <!-- Navbar untuk desktop -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom d-none d-lg-flex">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">ALIYUDIN'S<span class="highlight">WEB</span></a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header untuk mobile -->
+  <div class="mobile-header d-lg-none text-center bg-white p-4">
+    <img src="img/profil.jpg" alt="Fawzi Sayyed" class="profile-img rounded-circle shadow">
+    <h5 class="highlight mt-2">Dedin Aliyudin</h5>
+    <p class="text-muted">Web Developer</p>
+  </div>
+
+  <!-- Header untuk desktop - Modified layout -->
+  <div class="container d-none d-lg-block py-5">
+    <div class="row align-items-center">
+      <div class="hero-text">
+        <h1 class="mb-3">Hi, I'm <span class="highlight fw-bold">Dedin Aliyudin</span></h1>
+        <h3 class="fw-bold mb-3">Web Developer</h3>
+        <p class="text-muted mb-4 lead">I build modern, responsive websites using the latest web technologies including HTML5, CSS3, JavaScript, and Bootstrap framework.</p>
+        <div class="d-flex align-items-center">
+          <a href="#projects" class="btn btn-accent btn-lg me-4">See My Work</a>
+          <div class="fs-4">
+            <a href="#" class="text-dark mx-2"><i class="bi bi-github"></i></a>
+            <a href="#" class="text-dark mx-2"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="text-dark mx-2"><i class="bi bi-instagram"></i></a>
+          </div>
         </div>
-        <div class="header-image">
-            <img src="img/profil.jpg" alt="Header Image">
+      </div>
+      <div class="hero-image text-center">
+        <img src="img/profil.jpg" alt="Fawzi Sayyed" class="img-fluid rounded-circle shadow" style="max-width: 280px; border: 5px solid var(--primary);">
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <section id="about" class="my-5">
+      <h2 class="mb-4 text-primary text-center fw-bold">About Me</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-person-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Full Name</h5>
+            <p>Dedin Aliyudin</p>
+          </div>
         </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-mortarboard-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Education</h5>
+            <p>S1 Pendidikan Bahasa Inggris</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-briefcase-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Pekerjaan</h5>
+            <p>Fullday worker and Freelancer Web Developer</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-envelope-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Contact</h5>
+            <p>dedin.aliyudin97@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-heart-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Hobi</h5>
+            <p>Bussiness, Coding, Traveling</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="border rounded p-3 text-center h-100">
+            <i class="bi bi-geo-alt-fill fs-1 text-primary mb-2"></i>
+            <h5 class="fw-bold">Alamat</h5>
+            <p>KP. Manoko, Lembang, Bandung Barat</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Biodata -->
-    <section id="biodata" class="biodata">
-        <div class="section-title">
-            <h2>About Me</h2>
-            <p>A brief introduction about myself</p>
+    <section id="projects" class="my-5">
+      <h2 class="mb-4 text-primary text-center fw-bold">My Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/portfolio1.png" class="card-img-top" alt="Project 1" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Landing Page 1</h5>
+              <p class="card-text">Desain landing page untuk startup teknologi.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+            </div>
+          </div>
         </div>
-        <div class="biodata-grid">
-            <div class="bio-card">
-                <strong>Full Name</strong>
-                Nama Lengkap
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/portfolio2.jpg" class="card-img-top" alt="Project 2" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">E-commerce Page</h5>
+              <p class="card-text">Tampilan halaman toko online modern dan responsive.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
             </div>
-            <div class="bio-card">
-                <strong>Education</strong>
-                Pendidikan
-            </div>
-            <div class="bio-card">
-                <strong>Pekerjaan</strong>
-                Profesi
-            </div>
-            <div class="bio-card">
-                <strong>Contact</strong>
-                Nomor HP / Email
-            </div>
-            <div class="bio-card">
-                <strong>Hobi</strong>
-                Daftar Hobi
-            </div>
-            <div class="bio-card">
-                <strong>Alamat</strong>
-                Alamat Lengkap
-            </div>
+          </div>
         </div>
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm">
+            <img src="img/portfolio3.jpg" class="card-img-top" alt="Project 3" style="height: 200px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title fw-bold">Portfolio Page</h5>
+              <p class="card-text">Halaman portofolio pribadi dengan desain bersih dan menarik.</p>
+              <a href="#" class="btn btn-sm btn-outline-primary">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
+  </div>
 
-    <!-- Portofolio -->
-    <section id="portofolio" class="portfolio">
-        <div class="section-title">
-            <h2>Portofolio</h2>
-        </div>
-        <div class="portfolio-grid">
-            <div class="project-card">
-                <img src="img/portfolio1.png" alt="Proyek 1" style="display: block; margin: 0 auto;">
-                <div class="project-info">
-                    <h3>Proyek 1</h3>
-                    <p>Deskripsi proyek 1 yang menarik dan detail.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/portfolio2.jpg" alt="Proyek 2" style="display: block; margin: 0 auto;">
-                <div class="project-info">
-                    <h3>Proyek 2</h3>
-                    <p>Deskripsi proyek 2 yang menarik dan detail.</p>
-                </div>
-            </div>
-            <div class="project-card">
-                <img src="img/portfolio3.jpg" alt="Proyek 3" style="display: block; margin: 0 auto;">
-                <div class="project-info">
-                    <h3>Proyek 3</h3>
-                    <p>Deskripsi proyek 3 yang menarik dan detail.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Bottom mobile nav -->
+  <div class="mobile-nav d-lg-none bg-white fixed-bottom d-flex justify-content-around py-2">
+    <a href="#about" class="text-dark text-center text-decoration-none">
+      <i class="bi bi-person fs-4 d-block"></i>
+      <small>About</small>
+    </a>
+    <a href="#projects" class="text-dark text-center text-decoration-none">
+      <i class="bi bi-layers fs-4 d-block"></i>
+      <small>Projects</small>
+    </a>
+    <a href="#contact" class="text-dark text-center text-decoration-none">
+      <i class="bi bi-envelope fs-4 d-block"></i>
+      <small>Contact</small>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
